@@ -53,52 +53,94 @@
 
 <main id="main-content">
 
-  <!-- FEATURED STORY — full-width magazine hero -->
-  <section style="background:#f9fafb;padding:3rem 0 2.5rem;border-bottom:1px solid var(--border-subtle);">
+  <!-- NEWS & PRESS — "THE WIRE" (ticker + editorial front page) -->
+  <section style="background:#f9fafb;padding:2.5rem 0 2.75rem;border-bottom:1px solid var(--border-subtle);">
     <div class="container">
-      <div style="display:grid;grid-template-columns:3fr 2fr;gap:1.5rem;align-items:start;">
 
-        <!-- Featured card -->
-        <article class="news-featured" data-category="press-release" style="min-height:420px;">
-          <div class="news-featured-img"></div>
-          <span class="news-category">Press Release</span>
-          <div class="news-featured-body">
-            <div class="news-date"><time datetime="2026-06-03">3 June 2026</time></div>
-            <h2 class="news-featured-title"><a href="news-article.html">Nigeria and Japan Sign Landmark Bilateral Trade &amp; Investment Agreement</a></h2>
-            <p class="news-excerpt">The Embassy of Nigeria and the Japanese Ministry of Foreign Affairs signed a landmark bilateral trade agreement aimed at boosting two-way trade to $2 billion annually — opening new opportunities for businesses in both nations.</p>
-            <div class="news-card-footer">
-              <span class="news-read-time">4 min read</span>
-              <a href="news-article.html" class="news-readmore">Read Full Story</a>
+      <div class="nw-ticker" role="region" aria-label="Latest headlines ticker">
+        <span class="nw-ticker-label"><span class="nw-live-dot" aria-hidden="true"></span>Wire</span>
+        <div class="nw-ticker-viewport">
+          <div class="nw-ticker-track">
+            <a href="news-article.html" class="nw-ticker-item">Nigeria and Japan Sign Landmark Trade &amp; Investment Agreement</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news-article.html" class="nw-ticker-item">Democracy Day Reception Draws Diplomats and Community</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news-article.html" class="nw-ticker-item">Ambassador Addresses Tokyo International Business Forum</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news-article.html" class="nw-ticker-item">Nigeria–Japan Joint Economic Commission Meets in Tokyo</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news-article.html" class="nw-ticker-item">Mission Launches Online Appointment Booking</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news-article.html" class="nw-ticker-item">JICA and Nigeria Sign New Development Cooperation Agreement</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news-article.html" class="nw-ticker-item" aria-hidden="true" tabindex="-1">Nigeria and Japan Sign Landmark Trade &amp; Investment Agreement</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news-article.html" class="nw-ticker-item" aria-hidden="true" tabindex="-1">Democracy Day Reception Draws Diplomats and Community</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news-article.html" class="nw-ticker-item" aria-hidden="true" tabindex="-1">Ambassador Addresses Tokyo International Business Forum</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news-article.html" class="nw-ticker-item" aria-hidden="true" tabindex="-1">Nigeria–Japan Joint Economic Commission Meets in Tokyo</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news-article.html" class="nw-ticker-item" aria-hidden="true" tabindex="-1">Mission Launches Online Appointment Booking</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news-article.html" class="nw-ticker-item" aria-hidden="true" tabindex="-1">JICA and Nigeria Sign New Development Cooperation Agreement</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nw-frontpage">
+        <article class="nw-lead">
+          <div class="nw-lead-img" aria-hidden="true"></div>
+          <div class="nw-lead-body">
+            <span class="nw-lead-cat">Press Release</span>
+            <h2 class="nw-lead-title"><a href="news-article.html">Nigeria and Japan Sign Landmark Bilateral Trade &amp; Investment Agreement</a></h2>
+            <p class="nw-lead-excerpt">The Embassy of Nigeria and the Japanese Ministry of Foreign Affairs signed a landmark bilateral trade agreement aimed at boosting two-way trade to $2 billion annually — opening new opportunities for businesses in both nations.</p>
+            <div class="nw-byline">
+              <span>Communications Office</span><span class="nw-dot">·</span><time datetime="2026-06-03">3 June 2026</time><span class="nw-dot">·</span><span>4 min read</span>
             </div>
+            <a href="news-article.html" class="nw-continue">Continue Reading
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
           </div>
         </article>
 
-        <!-- Side stack of 3 recent stories -->
-        <div class="news-side-stack">
-          <article class="news-card" data-category="activities">
-            <div class="news-card-image"><div class="news-card-image-placeholder"></div><span class="news-category">Mission Activity</span></div>
-            <div class="news-card-body">
-              <div class="news-date"><time datetime="2026-05-29">29 May 2026</time></div>
-              <h3 class="news-title"><a href="news-article.html">Nigeria at 66: Democracy Day Reception at the Mission</a></h3>
-              <div class="news-card-footer"><span class="news-read-time">3 min</span><a href="news-article.html" class="news-readmore">Read</a></div>
-            </div>
-          </article>
-          <article class="news-card" data-category="speech">
-            <div class="news-card-image"><div class="news-card-image-placeholder"></div><span class="news-category">Speech</span></div>
-            <div class="news-card-body">
-              <div class="news-date"><time datetime="2026-05-20">20 May 2026</time></div>
-              <h3 class="news-title"><a href="news-article.html">Ambassador's Keynote at the International Business Forum</a></h3>
-              <div class="news-card-footer"><span class="news-read-time">5 min</span><a href="news-article.html" class="news-readmore">Read</a></div>
-            </div>
-          </article>
-        </div>
-
+        <aside class="nw-bulletin" aria-label="More headlines">
+          <h3 class="nw-bulletin-heading">More From the Newsroom</h3>
+          <ul class="nw-bulletin-list">
+            <li class="nw-bulletin-item" data-filter="activities">
+              <span class="nw-bulletin-cat">Mission Activity</span>
+              <a href="news-article.html" class="nw-bulletin-title">Nigeria at 66: Democracy Day Reception at the Mission</a>
+              <time datetime="2026-05-29">29 May 2026</time>
+            </li>
+            <li class="nw-bulletin-item" data-filter="speech">
+              <span class="nw-bulletin-cat">Speech</span>
+              <a href="news-article.html" class="nw-bulletin-title">Ambassador's Keynote at the International Business Forum</a>
+              <time datetime="2026-05-20">20 May 2026</time>
+            </li>
+            <li class="nw-bulletin-item" data-filter="bilateral">
+              <span class="nw-bulletin-cat">Nigeria–Japan</span>
+              <a href="news-article.html" class="nw-bulletin-title">Nigeria–Japan Joint Economic Commission Meets in Tokyo</a>
+              <time datetime="2026-05-15">15 May 2026</time>
+            </li>
+            <li class="nw-bulletin-item" data-filter="press-release">
+              <span class="nw-bulletin-cat">Press Release</span>
+              <a href="news-article.html" class="nw-bulletin-title">Mission Launches Online Appointment Booking for Consular Services</a>
+              <time datetime="2026-05-05">5 May 2026</time>
+            </li>
+            <li class="nw-bulletin-item" data-filter="activities">
+              <span class="nw-bulletin-cat">Cultural Event</span>
+              <a href="news-article.html" class="nw-bulletin-title">Nigerian Cultural Festival 2026 — Heritage &amp; Identity</a>
+              <time datetime="2026-04-20">20 April 2026</time>
+            </li>
+            <li class="nw-bulletin-item" data-filter="bilateral">
+              <span class="nw-bulletin-cat">Nigeria–Japan</span>
+              <a href="news-article.html" class="nw-bulletin-title">JICA and Nigeria Sign New Development Cooperation Agreement</a>
+              <time datetime="2026-04-05">5 April 2026</time>
+            </li>
+          </ul>
+          <a href="#all-news" class="nw-bulletin-more">Browse the Full Archive
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </aside>
       </div>
+
     </div>
   </section>
 
   <!-- TABBED ARCHIVE -->
-  <section class="section-pad"><div class="container">
+  <section class="section-pad" id="all-news"><div class="container">
+
+    <div class="section-eyebrow">Browse by Category</div>
+    <h2 class="section-title" style="margin-bottom:1.25rem;">Newsroom Archive</h2>
 
     <!-- Search + filters -->
     <div class="news-search-bar" style="margin-bottom:1.5rem;">
@@ -108,7 +150,7 @@
       </div>
     </div>
 
-    <div class="tabs-container" id="all-news">
+    <div class="tabs-container">
       <div class="tabs-nav" role="tablist" aria-label="News categories">
         <button class="tab-btn active" data-tab="tab-all" role="tab" aria-selected="true">All News</button>
         <button class="tab-btn" data-tab="tab-press" role="tab" aria-selected="false">Press Releases</button>

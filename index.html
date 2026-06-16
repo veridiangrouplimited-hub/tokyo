@@ -340,77 +340,78 @@
     </div>
   </section>
 
-  <!-- ═══ NEWS & PRESS — NEWSROOM BENTO REDESIGN ═══ -->
+  <!-- ═══ NEWS & PRESS — "THE WIRE" (ticker + editorial front page) ═══ -->
   <section class="section-pad bg-tinted" aria-labelledby="news-heading">
     <div class="container">
       <div class="section-header-flex" style="margin-bottom:1.25rem;">
         <div>
-          <span class="section-eyebrow"><span class="nf-live-dot" aria-hidden="true"></span>Latest from the Mission</span>
+          <span class="section-eyebrow">Latest from the Mission</span>
           <h2 id="news-heading" class="section-title" style="margin-bottom:0">News &amp; Press</h2>
         </div>
         <a href="news.html" class="btn btn-outline">View All</a>
       </div>
 
-      <div class="nf-filter-bar" role="group" aria-label="Filter news by category" id="nfFilterBar">
-        <button class="nf-filter-btn active" data-filter="all" aria-pressed="true">All Stories</button>
-        <button class="nf-filter-btn" data-filter="press-release" aria-pressed="false">Press Releases</button>
-        <button class="nf-filter-btn" data-filter="activities" aria-pressed="false">Mission Activities</button>
-        <button class="nf-filter-btn" data-filter="speech" aria-pressed="false">Speeches</button>
-        <button class="nf-filter-btn" data-filter="bilateral" aria-pressed="false">Nigeria–Japan</button>
+      <div class="nw-ticker" role="region" aria-label="Latest headlines ticker">
+        <span class="nw-ticker-label"><span class="nw-live-dot" aria-hidden="true"></span>Wire</span>
+        <div class="nw-ticker-viewport">
+          <div class="nw-ticker-track">
+            <a href="news.html" class="nw-ticker-item">Nigeria and Japan Sign Landmark Trade &amp; Investment Agreement</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news.html" class="nw-ticker-item">Democracy Day Reception Draws Diplomats and Community</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news.html" class="nw-ticker-item">Ambassador Addresses Tokyo International Business Forum</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news.html" class="nw-ticker-item">Nigeria–Japan Joint Economic Commission Meets in Tokyo</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news.html" class="nw-ticker-item" aria-hidden="true" tabindex="-1">Nigeria and Japan Sign Landmark Trade &amp; Investment Agreement</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news.html" class="nw-ticker-item" aria-hidden="true" tabindex="-1">Democracy Day Reception Draws Diplomats and Community</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news.html" class="nw-ticker-item" aria-hidden="true" tabindex="-1">Ambassador Addresses Tokyo International Business Forum</a><span class="nw-ticker-sep" aria-hidden="true">●</span>
+            <a href="news.html" class="nw-ticker-item" aria-hidden="true" tabindex="-1">Nigeria–Japan Joint Economic Commission Meets in Tokyo</a>
+          </div>
+        </div>
       </div>
 
-      <div class="nf-grid" id="nfGrid">
-
-        <!-- Spotlight story -->
-        <article class="nf-spotlight nf-item" data-filter="press-release">
-          <div class="nf-spotlight-img" aria-hidden="true"></div>
-          <div class="nf-spotlight-overlay" aria-hidden="true"></div>
-          <div class="nf-spotlight-body">
-            <span class="nf-tag">Press Release</span>
-            <h3 class="nf-spotlight-title"><a href="news.html">Nigeria and Japan Sign Landmark Bilateral Trade &amp; Investment Agreement</a></h3>
-            <p class="nf-spotlight-excerpt">The Embassy of Nigeria, Tokyo and Japan's Ministry of Foreign Affairs signed a landmark agreement aimed at boosting two-way trade to $2 billion annually.</p>
-            <div class="nf-spotlight-meta">
-              <time datetime="2026-06-03">3 June 2026</time>
-              <span>·</span>
-              <span>4 min read</span>
-              <a href="news.html" class="nf-readmore">Read Full Story
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
+      <div class="nw-frontpage">
+        <article class="nw-lead">
+          <div class="nw-lead-img" aria-hidden="true"></div>
+          <div class="nw-lead-body">
+            <span class="nw-lead-cat">Press Release</span>
+            <h3 class="nw-lead-title"><a href="news.html">Nigeria and Japan Sign Landmark Bilateral Trade &amp; Investment Agreement</a></h3>
+            <p class="nw-lead-excerpt">The Embassy of Nigeria, Tokyo and Japan's Ministry of Foreign Affairs signed a landmark agreement aimed at boosting two-way trade to $2 billion annually.</p>
+            <div class="nw-byline">
+              <span>Communications Office</span><span class="nw-dot">·</span><time datetime="2026-06-03">3 June 2026</time><span class="nw-dot">·</span><span>4 min read</span>
             </div>
+            <a href="news.html" class="nw-continue">Continue Reading
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
           </div>
         </article>
 
-        <article class="nf-card nf-item" data-filter="activities">
-          <span class="nf-card-tag">Mission Activity</span>
-          <time class="nf-card-date" datetime="2026-05-29">29 May 2026</time>
-          <h3 class="nf-card-title"><a href="news.html">Nigeria at 66: Democracy Day Celebration at the Mission</a></h3>
-          <a href="news.html" class="nf-card-link">Read More →</a>
-        </article>
-
-        <article class="nf-card nf-item" data-filter="speech">
-          <span class="nf-card-tag">Speech</span>
-          <time class="nf-card-date" datetime="2026-05-20">20 May 2026</time>
-          <h3 class="nf-card-title"><a href="news.html">Ambassador's Address at the International Business Forum, Tokyo</a></h3>
-          <a href="news.html" class="nf-card-link">Read More →</a>
-        </article>
-
-        <article class="nf-card nf-item" data-filter="bilateral">
-          <span class="nf-card-tag">Nigeria–Japan</span>
-          <time class="nf-card-date" datetime="2026-05-15">15 May 2026</time>
-          <h3 class="nf-card-title"><a href="news.html">Nigeria–Japan Joint Economic Commission Meets in Tokyo</a></h3>
-          <a href="news.html" class="nf-card-link">Read More →</a>
-        </article>
-
-        <article class="nf-card nf-item" data-filter="press-release">
-          <span class="nf-card-tag">Press Release</span>
-          <time class="nf-card-date" datetime="2026-05-08">8 May 2026</time>
-          <h3 class="nf-card-title"><a href="news.html">Embassy Statement on Expanded Visa-on-Arrival Pilot Programme</a></h3>
-          <a href="news.html" class="nf-card-link">Read More →</a>
-        </article>
-
+        <aside class="nw-bulletin" aria-label="More headlines">
+          <h3 class="nw-bulletin-heading">More From the Newsroom</h3>
+          <ul class="nw-bulletin-list">
+            <li class="nw-bulletin-item" data-filter="activities">
+              <span class="nw-bulletin-cat">Mission Activity</span>
+              <a href="news.html" class="nw-bulletin-title">Nigeria at 66: Democracy Day Celebration at the Mission</a>
+              <time datetime="2026-05-29">29 May 2026</time>
+            </li>
+            <li class="nw-bulletin-item" data-filter="speech">
+              <span class="nw-bulletin-cat">Speech</span>
+              <a href="news.html" class="nw-bulletin-title">Ambassador's Address at the International Business Forum, Tokyo</a>
+              <time datetime="2026-05-20">20 May 2026</time>
+            </li>
+            <li class="nw-bulletin-item" data-filter="bilateral">
+              <span class="nw-bulletin-cat">Nigeria–Japan</span>
+              <a href="news.html" class="nw-bulletin-title">Nigeria–Japan Joint Economic Commission Meets in Tokyo</a>
+              <time datetime="2026-05-15">15 May 2026</time>
+            </li>
+            <li class="nw-bulletin-item" data-filter="press-release">
+              <span class="nw-bulletin-cat">Press Release</span>
+              <a href="news.html" class="nw-bulletin-title">Embassy Statement on Expanded Visa-on-Arrival Pilot Programme</a>
+              <time datetime="2026-05-08">8 May 2026</time>
+            </li>
+          </ul>
+          <a href="news.html" class="nw-bulletin-more">View All News
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </aside>
       </div>
-
-      <p class="nf-empty" id="nfEmpty" hidden>No stories in this category right now. <a href="news.html">View all news →</a></p>
     </div>
   </section>
 
@@ -747,44 +748,6 @@
   });
 </script>
 <script src="main.js"></script>
-
-<!-- News & Press filter -->
-<script>
-(function () {
-  var bar = document.getElementById('nfFilterBar');
-  var items = document.querySelectorAll('#nfGrid .nf-item');
-  var empty = document.getElementById('nfEmpty');
-  if (!bar) return;
-
-  bar.addEventListener('click', function (e) {
-    var btn = e.target.closest('.nf-filter-btn');
-    if (!btn) return;
-
-    bar.querySelectorAll('.nf-filter-btn').forEach(function (b) {
-      b.classList.remove('active');
-      b.setAttribute('aria-pressed', 'false');
-    });
-    btn.classList.add('active');
-    btn.setAttribute('aria-pressed', 'true');
-
-    var filter = btn.dataset.filter;
-    var visible = 0;
-
-    items.forEach(function (item) {
-      if (filter === 'all' || item.dataset.filter === filter) {
-        item.hidden = false;
-        item.style.animation = 'nfFadeIn .3s ease both';
-        visible++;
-      } else {
-        item.hidden = true;
-        item.style.animation = '';
-      }
-    });
-
-    empty.hidden = visible > 0;
-  });
-})();
-</script>
 
 <!-- Notice toast logic -->
 <script>
