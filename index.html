@@ -340,83 +340,77 @@
     </div>
   </section>
 
-  <!-- ═══ NEWS — CLEAN EDITORIAL REDESIGN ═══ -->
+  <!-- ═══ NEWS & PRESS — NEWSROOM BENTO REDESIGN ═══ -->
   <section class="section-pad bg-tinted" aria-labelledby="news-heading">
     <div class="container">
-      <div class="section-header-flex" style="margin-bottom:1.5rem;">
+      <div class="section-header-flex" style="margin-bottom:1.25rem;">
         <div>
-          <span class="section-eyebrow">Latest from the Mission</span>
+          <span class="section-eyebrow"><span class="nf-live-dot" aria-hidden="true"></span>Latest from the Mission</span>
           <h2 id="news-heading" class="section-title" style="margin-bottom:0">News &amp; Press</h2>
         </div>
         <a href="news.html" class="btn btn-outline">View All</a>
       </div>
 
-      <div class="hn-wrap">
-        <!-- Lead story — full-width accent strip -->
-        <article class="hn-lead" data-category="press-release">
-          <div class="hn-lead-stripe"></div>
-          <div class="hn-lead-body">
-            <div class="hn-lead-meta">
-              <span class="hn-cat">Press Release</span>
-              <time datetime="2026-06-03">3 June 2026</time>
-              <span style="font-size:.68rem;color:var(--text-muted);">· 4 min read</span>
-            </div>
-            <h3 class="hn-lead-title"><a href="news.html">Nigeria and Japan Sign Landmark Bilateral Trade &amp; Investment Agreement</a></h3>
-            <p class="hn-lead-excerpt">The Embassy of Nigeria, Tokyo and Japan's Ministry of Foreign Affairs signed a landmark agreement aimed at boosting two-way trade to $2 billion annually — a historic milestone in Nigeria–Japan bilateral relations.</p>
-            <a href="news.html" class="hn-readmore">Read Full Story
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-          <div class="hn-lead-img" aria-hidden="true"></div>
-        </article>
-
-        <!-- 3-story grid -->
-        <div class="hn-grid">
-          <article class="hn-card" data-category="activities">
-            <div class="hn-card-img" aria-hidden="true">
-              <span class="hn-cat">Mission Activity</span>
-            </div>
-            <div class="hn-card-body">
-              <div class="hn-card-meta">
-                <time datetime="2026-05-29">29 May 2026</time>
-              </div>
-              <h3 class="hn-card-title"><a href="news.html">Nigeria at 66: Democracy Day Celebration at the Mission</a></h3>
-              <a href="news.html" class="hn-card-readmore">Read More
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-            </div>
-          </article>
-          <article class="hn-card" data-category="speech">
-            <div class="hn-card-img" aria-hidden="true">
-              <span class="hn-cat">Speech</span>
-            </div>
-            <div class="hn-card-body">
-              <div class="hn-card-meta">
-                <time datetime="2026-05-20">20 May 2026</time>
-              </div>
-              <h3 class="hn-card-title"><a href="news.html">Ambassador's Address at the International Business Forum, Tokyo</a></h3>
-              <a href="news.html" class="hn-card-readmore">Read More
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-            </div>
-          </article>
-          <article class="hn-card" data-category="bilateral">
-            <div class="hn-card-img" aria-hidden="true">
-              <span class="hn-cat">Nigeria–Japan</span>
-            </div>
-            <div class="hn-card-body">
-              <div class="hn-card-meta">
-                <time datetime="2026-05-15">15 May 2026</time>
-              </div>
-              <h3 class="hn-card-title"><a href="news.html">Nigeria–Japan Joint Economic Commission Meets in Tokyo</a></h3>
-              <a href="news.html" class="hn-card-readmore">Read More
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-            </div>
-          </article>
-        </div>
+      <div class="nf-filter-bar" role="group" aria-label="Filter news by category" id="nfFilterBar">
+        <button class="nf-filter-btn active" data-filter="all" aria-pressed="true">All Stories</button>
+        <button class="nf-filter-btn" data-filter="press-release" aria-pressed="false">Press Releases</button>
+        <button class="nf-filter-btn" data-filter="activities" aria-pressed="false">Mission Activities</button>
+        <button class="nf-filter-btn" data-filter="speech" aria-pressed="false">Speeches</button>
+        <button class="nf-filter-btn" data-filter="bilateral" aria-pressed="false">Nigeria–Japan</button>
       </div>
 
+      <div class="nf-grid" id="nfGrid">
+
+        <!-- Spotlight story -->
+        <article class="nf-spotlight nf-item" data-filter="press-release">
+          <div class="nf-spotlight-img" aria-hidden="true"></div>
+          <div class="nf-spotlight-overlay" aria-hidden="true"></div>
+          <div class="nf-spotlight-body">
+            <span class="nf-tag">Press Release</span>
+            <h3 class="nf-spotlight-title"><a href="news.html">Nigeria and Japan Sign Landmark Bilateral Trade &amp; Investment Agreement</a></h3>
+            <p class="nf-spotlight-excerpt">The Embassy of Nigeria, Tokyo and Japan's Ministry of Foreign Affairs signed a landmark agreement aimed at boosting two-way trade to $2 billion annually.</p>
+            <div class="nf-spotlight-meta">
+              <time datetime="2026-06-03">3 June 2026</time>
+              <span>·</span>
+              <span>4 min read</span>
+              <a href="news.html" class="nf-readmore">Read Full Story
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="nf-card nf-item" data-filter="activities">
+          <span class="nf-card-tag">Mission Activity</span>
+          <time class="nf-card-date" datetime="2026-05-29">29 May 2026</time>
+          <h3 class="nf-card-title"><a href="news.html">Nigeria at 66: Democracy Day Celebration at the Mission</a></h3>
+          <a href="news.html" class="nf-card-link">Read More →</a>
+        </article>
+
+        <article class="nf-card nf-item" data-filter="speech">
+          <span class="nf-card-tag">Speech</span>
+          <time class="nf-card-date" datetime="2026-05-20">20 May 2026</time>
+          <h3 class="nf-card-title"><a href="news.html">Ambassador's Address at the International Business Forum, Tokyo</a></h3>
+          <a href="news.html" class="nf-card-link">Read More →</a>
+        </article>
+
+        <article class="nf-card nf-item" data-filter="bilateral">
+          <span class="nf-card-tag">Nigeria–Japan</span>
+          <time class="nf-card-date" datetime="2026-05-15">15 May 2026</time>
+          <h3 class="nf-card-title"><a href="news.html">Nigeria–Japan Joint Economic Commission Meets in Tokyo</a></h3>
+          <a href="news.html" class="nf-card-link">Read More →</a>
+        </article>
+
+        <article class="nf-card nf-item" data-filter="press-release">
+          <span class="nf-card-tag">Press Release</span>
+          <time class="nf-card-date" datetime="2026-05-08">8 May 2026</time>
+          <h3 class="nf-card-title"><a href="news.html">Embassy Statement on Expanded Visa-on-Arrival Pilot Programme</a></h3>
+          <a href="news.html" class="nf-card-link">Read More →</a>
+        </article>
+
+      </div>
+
+      <p class="nf-empty" id="nfEmpty" hidden>No stories in this category right now. <a href="news.html">View all news →</a></p>
     </div>
   </section>
 
@@ -753,6 +747,44 @@
   });
 </script>
 <script src="main.js"></script>
+
+<!-- News & Press filter -->
+<script>
+(function () {
+  var bar = document.getElementById('nfFilterBar');
+  var items = document.querySelectorAll('#nfGrid .nf-item');
+  var empty = document.getElementById('nfEmpty');
+  if (!bar) return;
+
+  bar.addEventListener('click', function (e) {
+    var btn = e.target.closest('.nf-filter-btn');
+    if (!btn) return;
+
+    bar.querySelectorAll('.nf-filter-btn').forEach(function (b) {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
+
+    var filter = btn.dataset.filter;
+    var visible = 0;
+
+    items.forEach(function (item) {
+      if (filter === 'all' || item.dataset.filter === filter) {
+        item.hidden = false;
+        item.style.animation = 'nfFadeIn .3s ease both';
+        visible++;
+      } else {
+        item.hidden = true;
+        item.style.animation = '';
+      }
+    });
+
+    empty.hidden = visible > 0;
+  });
+})();
+</script>
 
 <!-- Notice toast logic -->
 <script>
