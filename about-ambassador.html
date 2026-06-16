@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Her Excellency Barr. Mrs. Olumilua Oluwayimika Ayotunwa — Ambassador and Head of Mission of the Federal Republic of Nigeria to Japan.">
+  <meta property="og:title" content="H.E. Barr. Mrs. Oluwayimika Olumilua | Ambassador to Japan | Embassy of Nigeria, Tokyo">
+  <meta property="og:description" content="Official biography of Her Excellency Barr. Mrs. Olumilua Oluwayimika Ayotunwa, Nigeria's Ambassadorial Representative to Japan.">
+  <title>Head of Mission | Embassy of Nigeria, Tokyo, Japan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="premium.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='33' height='100' fill='%230B5E3C'/><rect x='33' width='34' height='100' fill='%23fff'/><rect x='67' width='33' height='100' fill='%230B5E3C'/></svg>">
+  <style>
+    /* ── Ambassador Page Specific ─────────────────────────────── */
+    .amb-photo-frame {
+      background: linear-gradient(160deg, #0B5E3C 0%, #14532D 60%, #052e16 100%);
+      border-radius: var(--r-xl, 16px);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(11,94,60,.35), 0 4px 16px rgba(0,0,0,.15);
+    }
+    .amb-photo-frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .amb-photo-img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .amb-photo-caption {
+      padding: 1.1rem 1.25rem;
+      background: rgba(0,0,0,.25);
+      backdrop-filter: blur(6px);
+    }
+    .amb-photo-caption strong {
+      display: block;
+      color: #fff;
+      font-size: .95rem;
+      font-family: 'DM Serif Display', serif;
+      margin-bottom: .2rem;
+    }
+    .amb-photo-caption span {
+      color: rgba(255,255,255,.72);
+      font-size: .75rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+    }
+    .amb-quick-facts {
+      background: var(--n0);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-xl, 16px);
+      padding: 1.25rem;
+      margin-top: 1.25rem;
+    }
+    .amb-quick-facts h3 {
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .amb-quick-facts ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
+    .amb-quick-facts ul li {
+      display: flex;
+      flex-direction: column;
+      gap: .15rem;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .amb-quick-facts ul li:last-child { border-bottom: none; padding-bottom: 0; }
+    .fact-label {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .fact-value {
+      font-size: .875rem;
+      color: var(--g900);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* Layout */
+    .ambassador-layout {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .ambassador-layout { grid-template-columns: 1fr; }
+      .amb-photo-img { aspect-ratio: 4/3; object-position: center 20%; }
+    }
+
+    /* Biography */
+    .bio-intro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: #DCFCE7;
+      color: #14532D;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .3rem .9rem;
+      border-radius: var(--r-full);
+      border: 1px solid #BBF7D0;
+      margin-bottom: 1.1rem;
+    }
+    .bio-name-heading {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      color: var(--g900);
+      line-height: 1.2;
+      margin-bottom: .35rem;
+    }
+    .bio-title-line {
+      color: var(--text-muted);
+      font-size: .9rem;
+      font-weight: 500;
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .bio-title-line::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: var(--g600);
+      flex-shrink: 0;
+    }
+    .bio-body p {
+      color: var(--text-body);
+      font-size: .96rem;
+      line-height: 1.8;
+      margin-bottom: 1.1rem;
+    }
+    .bio-body p:last-child { margin-bottom: 0; }
+
+    /* Career Highlights */
+    .bio-career-highlights {
+      background: var(--n50, #f9fafb);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-xl, 16px);
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+    }
+    .bio-career-highlights h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      color: var(--g900);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+    .bio-career-highlights h3::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 1.1rem;
+      background: var(--g600);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .bio-career-highlights ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .7rem;
+    }
+    .bio-career-highlights li {
+      display: flex;
+      align-items: flex-start;
+      gap: .75rem;
+      font-size: .88rem;
+      color: var(--text-body);
+      line-height: 1.55;
+    }
+    .bio-career-highlights li::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--g600);
+      flex-shrink: 0;
+      margin-top: .45em;
+    }
+
+    /* Tab panel spacing */
+    .amb-tabs .tab-panel { padding-top: 1.5rem; }
+    .amb-tabs .tab-panel .amb-message-box { margin-top: 0; }
+    .amb-tabs .tab-panel .bio-body { margin-top: 0; }
+
+    /* Ambassador's Message */
+    .amb-message-box {
+      background: linear-gradient(135deg, #0B5E3C 0%, #064e32 100%);
+      border-radius: var(--r-xl, 16px);
+      padding: 2.5rem;
+      margin: 2.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .amb-message-box::before {
+      content: '\201C';
+      position: absolute;
+      top: -1rem;
+      left: 1.5rem;
+      font-size: 12rem;
+      font-family: 'DM Serif Display', serif;
+      color: rgba(255,255,255,.07);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .amb-message-box h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .amb-message-box h2::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 1.4rem;
+      background: #4ade80;
+      border-radius: 2px;
+    }
+    .amb-quote {
+      margin: 0;
+      border: none;
+      padding: 0;
+    }
+    .amb-quote p {
+      color: rgba(255,255,255,.88);
+      font-size: .95rem;
+      line-height: 1.85;
+      margin-bottom: 1.1rem;
+    }
+    .amb-quote-footer {
+      display: flex;
+      flex-direction: column;
+      gap: .2rem;
+      margin-top: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255,255,255,.15);
+    }
+    .amb-quote-footer strong { color: #fff; font-size: .95rem; font-family: 'DM Serif Display', serif; }
+    .amb-quote-footer span { color: rgba(255,255,255,.65); font-size: .78rem; }
+
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<!-- TOP BAR -->
+<div class="top-bar"><div class="container"><div class="top-bar-inner">
+  <div class="top-bar-left"><span>&#127475;&#127468; Official Website — Federal Republic of Nigeria</span></div>
+  <div class="top-bar-right">
+    <div class="lang-switch"><button data-lang="en" class="active">EN</button><button data-lang="jp">JP</button></div>
+    <a href="public-notices.html">Notices</a><a href="contact.html">Contact</a>
+  </div>
+</div></div></div>
+
+<!-- HEADER -->
+<header class="site-header"><div class="container"><div class="brand-bar">
+  <a href="index.html" class="site-logo" aria-label="Home">
+    <img src="images/mfa-logo.png" alt="Federal Republic of Nigeria" class="logo-img">
+    <div class="logo-divider" aria-hidden="true"></div>
+    <div class="logo-text">
+      <div class="mission-country">Federal Republic of Nigeria</div>
+      <div class="mission-title">Embassy of Nigeria, Tokyo</div>
+    </div>
+  </a>
+  <div class="header-contact">
+    <a href="tel:+81334715793" class="hdr-tel"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.86 9.11 19.79 19.79 0 0 1 .79.5 2 2 0 0 1 2.78 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 8.5a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +81-3-3471-5793</a>
+    <a href="mailto:info.tokyo@foreignaffairs.gov.ng" class="hdr-email"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> info.tokyo@foreignaffairs.gov.ng</a>
+  </div>
+</div></div></header>
+
+<!-- NAV -->
+<nav class="nav-bar" id="mainNav" aria-label="Main navigation"><div class="container"><div class="nav-bar-inner"><ul class="nav-list">
+  <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+  <li class="nav-item"><a href="about-overview.html" class="nav-link active">About the Mission <span class="caret">▾</span></a><ul class="dropdown"><li><a href="about-overview.html">Mission Overview</a></li><li><a href="about-ambassador.html">Head of Mission</a></li><li><a href="about-history.html">Mission History</a></li><li><a href="about-mandate.html">Mandate &amp; Functions</a></li><li><a href="about-leadership.html">Leadership &amp; Departments</a></li></ul></li>
+  <li class="nav-item"><a href="consular-services.html" class="nav-link">Consular Services <span class="caret">▾</span></a><ul class="dropdown"><li><a href="visa-services.html">Visa Services</a></li><li><a href="passport-services.html">Passport Services</a></li><li><a href="emergency-travel.html">Emergency Travel Certificate</a></li><li><a href="document-authentication.html">Document Authentication</a></li><li><a href="notarial-services.html">Notarial Services</a></li><li><a href="consular-assistance.html">Consular Assistance</a></li></ul></li>
+  <li class="nav-item"><a href="relations-overview.html" class="nav-link">Nigeria–Japan <span class="caret">▾</span></a><ul class="dropdown"><li><a href="relations-overview.html">Overview</a></li><li><a href="relations-political.html">Political Relations</a></li><li><a href="relations-economic.html">Economic Relations</a></li><li><a href="relations-trade.html">Trade &amp; Investment</a></li><li><a href="relations-cultural.html">Cultural Relations</a></li><li><a href="relations-education.html">Educational Cooperation</a></li><li><a href="relations-agreements.html">Bilateral Agreements</a></li></ul></li>
+  <li class="nav-item"><a href="diaspora-overview.html" class="nav-link">Nigerians in Japan <span class="caret">▾</span></a><ul class="dropdown"><li><a href="diaspora-overview.html">Overview</a></li><li><a href="diaspora-registration.html">Registration</a></li><li><a href="diaspora-programmes.html">Diaspora Programmes</a></li><li><a href="diaspora-emergency.html">Emergency Support</a></li><li><a href="diaspora-community.html">Community Notices</a></li></ul></li>
+  <li class="nav-item"><a href="news.html" class="nav-link">News &amp; Press <span class="caret">▾</span></a><ul class="dropdown"><li><a href="news.html">All News</a></li><li><a href="news-press-releases.html">Press Releases</a></li><li><a href="news-speeches.html">Speeches &amp; Statements</a></li><li><a href="news-activities.html">Mission Activities</a></li></ul></li>
+  <li class="nav-item"><a href="public-notices.html" class="nav-link">Public Notices</a></li>
+  <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+</ul><div class="nav-actions">
+  <button class="nav-search-btn" id="navSearchToggle" aria-label="Search" aria-expanded="false" aria-controls="navSearchPanel"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+  <button class="menu-toggle" id="menuToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</div></div></div>
+<div id="navSearchPanel" class="nav-search-modal" aria-hidden="true"><div class="container"><div class="search-box"><input type="search" placeholder="Search the Mission website..." aria-label="Search"><button type="button">Search</button></div></div></div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="container">
+    <h1>Head of Mission</h1>
+    <p>Her Excellency Barr. Mrs. Olumilua Oluwayimika Ayotunwa<br>Ambassador of Nigeria to Japan</p>
+  </div>
+  <div class="page-hero-wave"><svg viewBox="0 0 1440 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,30 C360,0 1080,48 1440,15 L1440,48 L0,48 Z" fill="#FFFFFF"/></svg></div>
+</div>
+<div class="breadcrumb-bar"><div class="container"><ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+  <li class="breadcrumb-item"><a href="about-overview.html">About the Mission</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Head of Mission</li>
+</ol></div></div>
+
+<!-- MAIN -->
+<main id="main-content">
+<section class="section-pad"><div class="container">
+  <div class="ambassador-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="ambassador-sidebar">
+      <div class="amb-photo-frame">
+        <picture>
+          <source srcset="images/ambassador-olumilua.webp" type="image/webp">
+          <source srcset="images/ambassador-olumilua.jpg" type="image/jpeg">
+          <img
+            src="images/ambassador-olumilua.jpg"
+            alt="Her Excellency Barr. Mrs. Olumilua Oluwayimika Ayotunwa, Ambassador of Nigeria to Japan"
+            class="amb-photo-img"
+            loading="eager"
+            decoding="async"
+            width="600" height="749"
+            onerror="this.closest('picture').style.display='none'; this.closest('.amb-photo-frame').querySelector('div[style*=display]').style.display='flex';"
+          >
+        </picture>
+        <!-- Fallback placeholder if image not yet placed in /images/ -->
+        <div style="display:none; width:100%; aspect-ratio:3/4; align-items:center; justify-content:center; flex-direction:column; gap:.75rem; background:rgba(0,0,0,.2);">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span style="color:rgba(255,255,255,.5);font-size:.75rem;">Photo pending</span>
+        </div>
+        <div class="amb-photo-caption">
+          <strong>H.E. Barr. Mrs. Oluwayimika Olumilua</strong>
+          <span>Ambassador &amp; Head of Mission</span>
+        </div>
+      </div>
+
+      <div class="amb-quick-facts">
+        <h3>Key Information</h3>
+        <ul>
+          <li>
+            <span class="fact-label">Full Name</span>
+            <span class="fact-value">Barr. Mrs. Olumilua Oluwayimika Ayotunwa</span>
+          </li>
+          <li>
+            <span class="fact-label">Title</span>
+            <span class="fact-value">Ambassador &amp; Head of Mission</span>
+          </li>
+          <li>
+            <span class="fact-label">Accredited to</span>
+            <span class="fact-value">Japan</span>
+          </li>
+          <li>
+            <span class="fact-label">State of Origin</span>
+            <span class="fact-value">Ekiti State, Nigeria</span>
+          </li>
+          <li>
+            <span class="fact-label">Profession</span>
+            <span class="fact-value">Legal Practitioner (Barrister-at-Law)</span>
+          </li>
+          <li>
+            <span class="fact-label">Contact</span>
+            <span class="fact-value"><a href="mailto:ambassador.tokyo@foreignaffairs.gov.ng" style="color:var(--g700);">ambassador.tokyo@foreignaffairs.gov.ng</a></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="amb-quick-facts">
+        <h3>In This Section</h3>
+        <ul class="sidebar-links" style="list-style:none;padding:0;margin:0;">
+          <li><a href="about-overview.html">← Mission Overview</a></li>
+          <li><a href="about-history.html">Mission History</a></li>
+          <li><a href="about-mandate.html">Mandate &amp; Functions</a></li>
+          <li><a href="about-leadership.html">Leadership &amp; Departments</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="ambassador-main">
+
+      <!-- BIO HEADER (always visible, above tabs) -->
+      <div class="bio-intro-badge">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Ambassador Extraordinary &amp; Head of Mission
+      </div>
+      <h2 class="bio-name-heading">Barr. Mrs. Olumilua<br>Oluwayimika Ayotunwa</h2>
+      <div class="bio-title-line">Ambassador of Nigeria to Japan</div>
+
+      <!-- TABS -->
+      <div class="tabs-wrapper amb-tabs" style="margin-top:1.75rem;">
+        <nav class="tabs-nav" role="tablist" aria-label="Ambassador information">
+          <button class="tab-btn active" data-tab="bio" role="tab" aria-selected="true" aria-controls="bio" id="btn-bio">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Biography
+          </button>
+          <button class="tab-btn" data-tab="message" role="tab" aria-selected="false" aria-controls="message" id="btn-message">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Ambassador's Message
+          </button>
+          <button class="tab-btn" data-tab="priorities" role="tab" aria-selected="false" aria-controls="priorities" id="btn-priorities">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            Priority Areas
+          </button>
+        </nav>
+
+        <!-- TAB 1: BIOGRAPHY -->
+        <div class="tab-panel active" id="bio" role="tabpanel" aria-labelledby="btn-bio">
+          <div class="bio-body">
+            <p>Barr. Mrs. Olumilua Oluwayimika Ayotunwa — popularly known as Oluwayimika Olumilua — is a distinguished Nigerian legal practitioner, public servant, and the Ambassadorial Representative of Nigeria to Japan. She was nominated from Ekiti State as part of Nigeria's ambassadorial appointments and subsequently posted to Tokyo, where she now leads the Nigerian Mission as Head of Mission.</p>
+
+            <p>A Barrister-at-Law by training and vocation, Ambassador Olumilua has cultivated a professional career at the intersection of law, public service, and civic leadership. Her legal expertise, combined with a deep commitment to community advancement and women's empowerment, has defined her public profile and established her as a respected voice in southwest Nigeria's professional and civic spheres.</p>
+
+            <p>Prior to her appointment to the Tokyo Mission, Ambassador Olumilua was publicly identified as the <strong>Southwest Zonal Coordinator of the NACCIMA Business Women Group (NAWORG)</strong> — the women's enterprise arm of the Nigeria Association of Chambers of Commerce, Industry, Mines and Agriculture. In this capacity, she championed initiatives aimed at strengthening women's participation in business, public procurement, and enterprise development across the Southwest geopolitical zone of Nigeria.</p>
+
+            <p>Her appointment to Japan reflects a career of sustained service, professional distinction, and community leadership. Positioned at the helm of one of Nigeria's most strategically important diplomatic missions in Asia, Ambassador Olumilua brings to the role a bridge-building disposition, a commitment to the welfare of Nigerians in the diaspora, and a vision for deepening the bilateral relationship between Nigeria and Japan across diplomatic, economic, cultural, and people-to-people dimensions.</p>
+
+            <p>Ambassador Olumilua is dedicated to the advancement of Nigeria's national interests, the promotion of bilateral trade and investment between Nigeria and Japan, and the delivery of accessible, responsive consular services to the thousands of Nigerians who call Japan home.</p>
+          </div>
+
+          <div class="bio-career-highlights">
+            <h3>Background &amp; Key Roles</h3>
+            <ul>
+              <li>Appointed as Nigeria's Ambassadorial Representative to Japan, nominated from Ekiti State</li>
+              <li>Southwest Zonal Coordinator, NACCIMA Business Women Group (NAWORG), Federal Republic of Nigeria</li>
+              <li>Spearheaded public procurement sensitisation and enterprise participation programmes for women in business across the Southwest zone</li>
+              <li>Active legal practitioner (Barrister-at-Law) with a career spanning law, public service, and community advancement</li>
+              <li>Advocate for women's economic inclusion, enterprise development, and civic participation</li>
+              <li>Named among Nigeria's ambassadorial nominees, subsequently posted to the Embassy in Tokyo, Japan</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- TAB 2: AMBASSADOR'S MESSAGE -->
+        <div class="tab-panel" id="message" role="tabpanel" aria-labelledby="btn-message">
+          <div class="amb-message-box">
+            <h2>Ambassador's Message</h2>
+            <blockquote class="amb-quote">
+              <p>It is my honour and privilege to serve as Ambassador of Nigeria to Japan. Nigeria and Japan share a relationship grounded in mutual respect, shared ambition, and decades of fruitful cooperation — and it is a relationship with enormous untapped potential that this Mission is committed to realising.</p>
+              <p>Japan is one of the world's most innovative and technologically advanced economies, and Nigeria is Africa's largest economy and most populous nation. The convergence of these two great nations holds extraordinary promise — in trade, technology transfer, investment, education, and cultural exchange. It is my mandate to deepen that partnership and to ensure that both countries benefit fully from what they can offer each other.</p>
+              <p>To our Nigerian community in Japan: this Mission exists for you. We are here to support you, protect your rights, and ensure that wherever you are in Japan, you remain connected to your homeland. I encourage every Nigerian in Japan to register with the Mission, engage with our programmes, and continue to represent our great nation with pride and distinction.</p>
+              <footer class="amb-quote-footer">
+                <strong>H.E. Barr. Mrs. Olumilua Oluwayimika Ayotunwa</strong>
+                <span>Ambassador &amp; Head of Mission</span>
+                <span>Embassy of Nigeria, Tokyo, Japan</span>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- TAB 3: PRIORITY AREAS -->
+        <div class="tab-panel" id="priorities" role="tabpanel" aria-labelledby="btn-priorities">
+          <h3 class="section-title" style="margin-top:0;margin-bottom:1.25rem;">Priority Areas</h3>
+          <div class="grid grid-2" style="gap:1.25rem;">
+            <div class="priority-card">
+              <div class="priority-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <h4>Diplomatic Relations</h4>
+              <p>Strengthening political ties and high-level dialogue between Nigeria and Japan.</p>
+            </div>
+            <div class="priority-card">
+              <div class="priority-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h4>Trade &amp; Investment</h4>
+              <p>Promoting bilateral trade and attracting Japanese investment to Nigeria's priority sectors.</p>
+            </div>
+            <div class="priority-card">
+              <div class="priority-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h4>Diaspora Welfare</h4>
+              <p>Ensuring the welfare, rights, and inclusion of all Nigerians resident in Japan.</p>
+            </div>
+            <div class="priority-card">
+              <div class="priority-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h4>Cultural Diplomacy</h4>
+              <p>Showcasing Nigeria's rich cultural heritage and fostering people-to-people connections with Japan.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /tabs-wrapper -->
+
+    </div><!-- /ambassador-main -->
+  </div><!-- /ambassador-layout -->
+</div></section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="flag-strip" aria-hidden="true"><span class="flag-green"></span><span class="flag-white"></span><span class="flag-green"></span></div>
+  <div class="footer-top"><div class="container"><div class="footer-grid">
+    <div class="footer-about">
+      <a href="index.html" class="site-logo">
+        <img src="images/mfa-logo.png" alt="Federal Republic of Nigeria" class="logo-img" style="height:52px;opacity:.9;">
+        <div class="logo-divider" style="background:rgba(255,255,255,.2);"></div>
+        <div class="logo-text">
+          <div class="mission-country" style="color:#999;">Federal Republic of Nigeria</div>
+          <div class="mission-title" style="color:#fff;">Embassy of Nigeria, Tokyo</div>
+        </div>
+      </a>
+      <p style="margin-top:1rem;font-size:.875rem;color:#aaa;">Official diplomatic mission of the Federal Republic of Nigeria to Japan.</p>
+    </div>
+    <div class="footer-col"><h4>About</h4><ul class="footer-links"><li><a href="about-overview.html">Mission Overview</a></li><li><a href="about-ambassador.html">Head of Mission</a></li><li><a href="about-history.html">Mission History</a></li><li><a href="about-mandate.html">Mandate</a></li><li><a href="about-leadership.html">Leadership</a></li></ul></div>
+    <div class="footer-col"><h4>Services</h4><ul class="footer-links"><li><a href="visa-services.html">Visa Services</a></li><li><a href="passport-services.html">Passport Services</a></li><li><a href="emergency-travel.html">Emergency Travel</a></li><li><a href="consular-assistance.html">Consular Assistance</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul class="footer-contact-info">
+      <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><address style="font-style:normal;">2-10-3 Shoto, Shibuya-ku, Tokyo 150-0046, Japan</address></li>
+      <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.86 9.11 19.79 19.79 0 0 1 .79.5 2 2 0 0 1 2.78 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 8.5a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+81334715793">+81-3-3471-5793</a></li>
+      <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:info.tokyo@foreignaffairs.gov.ng">info.tokyo@foreignaffairs.gov.ng</a></li>
+    </ul></div>
+  </div></div></div>
+  <div class="footer-bottom"><div class="container"><div class="footer-bottom-inner">
+    <p>© <span id="footerYear"></span> Embassy of the Federal Republic of Nigeria, Tokyo. All rights reserved.</p>
+    <nav class="footer-bottom-links"><a href="privacy-policy.html">Privacy Policy</a><a href="accessibility.html">Accessibility</a><a href="terms.html">Terms of Use</a><a href="sitemap.html">Sitemap</a></nav>
+  </div></div></div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+<script>document.getElementById('footerYear').textContent=new Date().getFullYear();</script>
+<script src="main.js"></script>
+</body>
+</html>

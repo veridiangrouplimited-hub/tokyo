@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nigerianembassy.[xx]/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.nigerianembassy.[xx]/?lang=jp"/>
+  </url>
+
+  <!-- About the Mission -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/about.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nigerianembassy.[xx]/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.nigerianembassy.[xx]/about.html?lang=jp"/>
+  </url>
+
+  <!-- Consular Services Hub -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/consular-services.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Visa Services -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/visa-services.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nigerianembassy.[xx]/visa-services.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.nigerianembassy.[xx]/visa-services.html?lang=jp"/>
+  </url>
+
+  <!-- Passport Services -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/passport-services.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nigerianembassy.[xx]/passport-services.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.nigerianembassy.[xx]/passport-services.html?lang=jp"/>
+  </url>
+
+  <!-- Emergency Travel Certificate -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/emergency-travel.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Document Authentication -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/document-authentication.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Notarial Services -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/notarial-services.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Consular Assistance -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/consular-assistance.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Nigeria–Host Country Relations -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/relations.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Nigerians in Diaspora -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/diaspora.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- News & Press Releases -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/news.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sample News Article -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/news-article.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Public Notices -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/public-notices.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nigerianembassy.[xx]/public-notices.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.nigerianembassy.[xx]/public-notices.html?lang=jp"/>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/contact.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nigerianembassy.[xx]/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.nigerianembassy.[xx]/contact.html?lang=jp"/>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/privacy-policy.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Accessibility Statement -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/accessibility.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Terms of Use -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/terms.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- HTML Sitemap -->
+  <url>
+    <loc>https://www.nigerianembassy.[xx]/sitemap.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>

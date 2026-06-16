@@ -1,0 +1,498 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the leadership team and departments of the Nigerian Embassy — political, consular, economic, and cultural affairs.">
+  <title>Leadership &amp; Departments | About the Mission | Nigerian Embassy</title>  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="premium.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='33' height='100' fill='%230B5E3C'/><rect x='33' width='34' height='100' fill='%23fff'/><rect x='67' width='33' height='100' fill='%230B5E3C'/></svg>">
+  <style>
+    /* ── Team Cards ──────────────────────────────────────────────── */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 3.5rem;
+    }
+    .team-card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,.07), 0 1px 3px rgba(0,0,0,.05);
+      transition: transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .team-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,.12), 0 2px 8px rgba(0,0,0,.06);
+    }
+    .team-card-photo {
+      height: 170px;
+      background: linear-gradient(160deg, #0B5E3C 0%, #064e32 60%, #031a0e 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .team-card-photo::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(-45deg,rgba(255,255,255,.04) 0,rgba(255,255,255,.04) 1px,transparent 1px,transparent 16px);
+    }
+    .team-card-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .team-card-photo .team-avatar-fallback {
+      position: relative;
+      z-index: 1;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.12);
+      border: 2px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Flag accent strip on photo bottom */
+    .team-card-photo::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg,#0B5E3C 33%,#fff 33%,#fff 66%,#0B5E3C 66%);
+    }
+    .team-card-body {
+      padding: 1.1rem 1.2rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .team-card-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem;
+      color: var(--g900);
+      margin: 0 0 .25rem;
+      line-height: 1.3;
+    }
+    .team-card-title {
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--g600);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: .25rem;
+    }
+    .team-card-dept {
+      font-size: .78rem;
+      color: var(--text-muted);
+      margin-bottom: .85rem;
+      flex: 1;
+    }
+    .team-card-email {
+      font-size: .71rem;
+      color: var(--g600);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      font-weight: 600;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: .7rem;
+      transition: color .15s;
+    }
+    .team-card-email:hover { color: var(--g800); }
+    .team-card-bio-link {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: var(--g600);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      margin-top: .5rem;
+      transition: gap .15s;
+    }
+    .team-card-bio-link:hover { gap: .5rem; color: var(--g800); }
+
+    /* ── Department Tabs ─────────────────────────────────────────── */
+    .dept-tab-panel {
+      padding: 2rem 0 0;
+    }
+    .dept-tab-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .dept-tab-desc p { font-size: .92rem; line-height: 1.78; color: var(--text-body); margin-bottom: 1rem; }
+    .dept-tab-desc p:last-child { margin-bottom: 0; }
+    .dept-tab-functions h4 {
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: .85rem;
+    }
+    .dept-func-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .dept-func-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: .65rem;
+      font-size: .87rem;
+      color: var(--text-body);
+      line-height: 1.55;
+    }
+    .dept-func-list li::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--g600);
+      flex-shrink: 0;
+      margin-top: .45em;
+    }
+    .dept-contact-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: 8px;
+      padding: .65rem 1rem;
+      font-size: .78rem;
+      color: #14532D;
+      font-weight: 600;
+    }
+    .dept-contact-chip a { color: var(--g700); text-decoration: none; }
+    .dept-contact-chip a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+      .dept-tab-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+      .team-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    }
+    @media (max-width: 480px) {
+      .team-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<div class="top-bar"><div class="container"><div class="top-bar-inner"><div class="top-bar-left"><span>&#127475;&#127468; Official Website — Federal Republic of Nigeria</span></div><div class="top-bar-right"><div class="lang-switch"><button data-lang="en" class="active">EN</button><button data-lang="jp">JP</button></div><a href="public-notices.html">Notices</a><a href="contact.html">Contact</a></div></div></div></div>
+<header class="site-header"><div class="container"><div class="brand-bar">
+  <a href="index.html" class="site-logo" aria-label="Home"><img src="images/mfa-logo.png" alt="Federal Republic of Nigeria" class="logo-img"><div class="logo-divider" aria-hidden="true"></div><div class="logo-text"><div class="mission-country">Federal Republic of Nigeria</div><div class="mission-title">Embassy of Nigeria, Tokyo</div></div></a>
+  <div class="header-contact"><a href="tel:+0000000000" class="hdr-tel"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.86 9.11 19.79 19.79 0 0 1 .79.5 2 2 0 0 1 2.78 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 8.5a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +[Country Code] [Phone Number]</a><a href="mailto:info.tokyo@foreignaffairs.gov.ng" class="hdr-email"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> info.tokyo@foreignaffairs.gov.ng</a></div>
+</div></div></header>
+<nav class="nav-bar" id="mainNav" aria-label="Main navigation"><div class="container"><div class="nav-bar-inner"><ul class="nav-list">
+  <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+  <li class="nav-item"><a href="about-overview.html" class="nav-link active">About the Mission <span class="caret">▾</span></a><ul class="dropdown"><li><a href="about-overview.html">Mission Overview</a></li><li><a href="about-ambassador.html">Head of Mission</a></li><li><a href="about-history.html">Mission History</a></li><li><a href="about-mandate.html">Mandate &amp; Functions</a></li><li><a href="about-leadership.html">Leadership &amp; Departments</a></li></ul></li>
+  <li class="nav-item"><a href="consular-services.html" class="nav-link">Consular Services <span class="caret">▾</span></a><ul class="dropdown"><li><a href="visa-services.html">Visa Services</a></li><li><a href="passport-services.html">Passport Services</a></li><li><a href="emergency-travel.html">Emergency Travel Certificate</a></li><li><a href="document-authentication.html">Document Authentication</a></li><li><a href="notarial-services.html">Notarial Services</a></li><li><a href="consular-assistance.html">Consular Assistance</a></li></ul></li>
+  <li class="nav-item"><a href="relations-overview.html" class="nav-link">Nigeria–Japan <span class="caret">▾</span></a><ul class="dropdown"><li><a href="relations-overview.html">Overview</a></li><li><a href="relations-political.html">Political Relations</a></li><li><a href="relations-economic.html">Economic Relations</a></li><li><a href="relations-trade.html">Trade &amp; Investment</a></li><li><a href="relations-cultural.html">Cultural Relations</a></li><li><a href="relations-education.html">Educational Cooperation</a></li><li><a href="relations-agreements.html">Bilateral Agreements</a></li></ul></li>
+  <li class="nav-item"><a href="diaspora-overview.html" class="nav-link">Nigerians in Japan <span class="caret">▾</span></a><ul class="dropdown"><li><a href="diaspora-overview.html">Overview</a></li><li><a href="diaspora-registration.html">Registration</a></li><li><a href="diaspora-programmes.html">Diaspora Programmes</a></li><li><a href="diaspora-emergency.html">Emergency Support</a></li><li><a href="diaspora-community.html">Community Notices</a></li></ul></li>
+  <li class="nav-item"><a href="news.html" class="nav-link">News &amp; Press <span class="caret">▾</span></a><ul class="dropdown"><li><a href="news.html">All News</a></li><li><a href="news-press-releases.html">Press Releases</a></li><li><a href="news-speeches.html">Speeches &amp; Statements</a></li><li><a href="news-activities.html">Mission Activities</a></li></ul></li>
+  <li class="nav-item"><a href="public-notices.html" class="nav-link">Public Notices</a></li>
+  <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+</ul><div class="nav-actions"><button class="nav-search-btn" id="navSearchToggle" aria-label="Search" aria-expanded="false" aria-controls="navSearchPanel"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><button class="menu-toggle" id="menuToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button></div></div></div>
+<div id="navSearchPanel" class="nav-search-modal" aria-hidden="true"><div class="container"><div class="search-box"><input type="search" placeholder="Search the Mission website..." aria-label="Search"><button type="button">Search</button></div></div></div>
+</nav>
+
+<div class="page-hero"><div class="container"><h1>Leadership &amp; Departments</h1><p>The senior diplomatic and professional staff serving Nigerians in Japan.</p></div><div class="page-hero-wave"><svg viewBox="0 0 1440 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,30 C360,0 1080,48 1440,15 L1440,48 L0,48 Z" fill="#FFFFFF"/></svg></div></div>
+<div class="breadcrumb-bar"><div class="container"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item"><a href="about-overview.html">About the Mission</a></li><li class="breadcrumb-item active" aria-current="page">Leadership &amp; Departments</li></ol></div></div>
+
+<main id="main-content">
+<section class="section-pad"><div class="container">
+
+  <!-- ── THE TEAM ── -->
+  <div class="section-eyebrow">Our People</div>
+  <h2 class="section-title">The Team</h2>
+  <p class="section-subtitle">Nigeria's diplomatic and professional staff at the Embassy in Tokyo</p>
+
+  <div class="team-grid">
+
+    <!-- Ambassador -->
+    <div class="team-card">
+      <div class="team-card-photo">
+        <img src="images/ambassador-olumilua.png" alt="H.E. Barr. Mrs. Olumilua Oluwayimika Ayotunwa" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="team-avatar-fallback" style="display:none;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+      </div>
+      <div class="team-card-body">
+        <h3 class="team-card-name">H.E. Barr. Mrs. Olumilua Oluwayimika Ayotunwa</h3>
+        <div class="team-card-title">Ambassador &amp; Head of Mission</div>
+        <p class="team-card-dept">Embassy of Nigeria, Tokyo</p>
+        <a href="about-ambassador.html" class="team-card-bio-link">Full biography →</a>
+        <a href="mailto:ambassador.tokyo@foreignaffairs.gov.ng" class="team-card-email">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          ambassador.tokyo@...
+        </a>
+      </div>
+    </div>
+
+    <!-- DCM -->
+    <div class="team-card">
+      <div class="team-card-photo">
+        <div class="team-avatar-fallback">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+      </div>
+      <div class="team-card-body">
+        <h3 class="team-card-name">[DCM Full Name]</h3>
+        <div class="team-card-title">Deputy Chief of Mission</div>
+        <p class="team-card-dept">Minister / Minister-Counsellor</p>
+        <a href="mailto:dcm.tokyo@foreignaffairs.gov.ng" class="team-card-email">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          dcm.tokyo@...
+        </a>
+      </div>
+    </div>
+
+    <!-- Head, Political -->
+    <div class="team-card">
+      <div class="team-card-photo">
+        <div class="team-avatar-fallback">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+      </div>
+      <div class="team-card-body">
+        <h3 class="team-card-name">[Name]</h3>
+        <div class="team-card-title">Minister-Counsellor</div>
+        <p class="team-card-dept">Head, Political Section</p>
+        <a href="mailto:political.tokyo@foreignaffairs.gov.ng" class="team-card-email">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          political.tokyo@...
+        </a>
+      </div>
+    </div>
+
+    <!-- Head, Consular -->
+    <div class="team-card">
+      <div class="team-card-photo">
+        <div class="team-avatar-fallback">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+      </div>
+      <div class="team-card-body">
+        <h3 class="team-card-name">[Name]</h3>
+        <div class="team-card-title">Counsellor</div>
+        <p class="team-card-dept">Head, Consular Section</p>
+        <a href="mailto:consular.tokyo@foreignaffairs.gov.ng" class="team-card-email">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          consular.tokyo@...
+        </a>
+      </div>
+    </div>
+
+    <!-- Head, Economic -->
+    <div class="team-card">
+      <div class="team-card-photo">
+        <div class="team-avatar-fallback">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+      </div>
+      <div class="team-card-body">
+        <h3 class="team-card-name">[Name]</h3>
+        <div class="team-card-title">First Secretary</div>
+        <p class="team-card-dept">Head, Economic &amp; Commercial Section</p>
+        <a href="mailto:economic.tokyo@foreignaffairs.gov.ng" class="team-card-email">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          economic.tokyo@...
+        </a>
+      </div>
+    </div>
+
+    <!-- Head, Cultural -->
+    <div class="team-card">
+      <div class="team-card-photo">
+        <div class="team-avatar-fallback">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+      </div>
+      <div class="team-card-body">
+        <h3 class="team-card-name">[Name]</h3>
+        <div class="team-card-title">Second Secretary</div>
+        <p class="team-card-dept">Head, Cultural &amp; Public Diplomacy</p>
+        <a href="mailto:culture.tokyo@foreignaffairs.gov.ng" class="team-card-email">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          culture.tokyo@...
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /team-grid -->
+
+  <!-- ── MISSION DEPARTMENTS — TABS ── -->
+  <div class="section-eyebrow">How We Work</div>
+  <h2 class="section-title">Mission Departments</h2>
+  <p style="color:var(--text-secondary);max-width:620px;margin-bottom:0;">The Embassy is structured into specialist sections, each responsible for a distinct area of diplomatic and consular activity.</p>
+
+  <div class="tabs-container" style="margin-top:2rem;">
+    <div class="tabs-nav" role="tablist" aria-label="Mission departments">
+      <button class="tab-btn active" data-tab="dept-political" role="tab" aria-selected="true">Political</button>
+      <button class="tab-btn" data-tab="dept-consular" role="tab" aria-selected="false">Consular</button>
+      <button class="tab-btn" data-tab="dept-economic" role="tab" aria-selected="false">Economic</button>
+      <button class="tab-btn" data-tab="dept-cultural" role="tab" aria-selected="false">Cultural</button>
+      <button class="tab-btn" data-tab="dept-admin" role="tab" aria-selected="false">Administration</button>
+    </div>
+
+    <!-- Political -->
+    <div id="dept-political" class="tab-panel active dept-tab-panel" role="tabpanel">
+      <div class="dept-tab-inner">
+        <div class="dept-tab-desc">
+          <p>The Political Section manages the day-to-day diplomatic relationship between Nigeria and Japan. It is responsible for political reporting to the Ministry of Foreign Affairs in Abuja, coordinating high-level visits and official engagements, and representing Nigeria's positions at multilateral fora in Japan.</p>
+          <p>The section works closely with Japan's Ministry of Foreign Affairs (MOFA), the diplomatic corps in Tokyo, and international organisations including the UN-affiliated bodies headquartered in Japan.</p>
+        </div>
+        <div class="dept-tab-functions">
+          <h4>Key Functions</h4>
+          <ul class="dept-func-list">
+            <li>High-level diplomatic exchanges and protocol management</li>
+            <li>Political analysis and reporting to Abuja</li>
+            <li>Coordination with Japan's Ministry of Foreign Affairs</li>
+            <li>Engagement with international organisations in Japan</li>
+            <li>Multilateral diplomacy and treaty affairs</li>
+          </ul>
+          <div class="dept-contact-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:political.tokyo@foreignaffairs.gov.ng">political.tokyo@foreignaffairs.gov.ng</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Consular -->
+    <div id="dept-consular" class="tab-panel dept-tab-panel" role="tabpanel">
+      <div class="dept-tab-inner">
+        <div class="dept-tab-desc">
+          <p>The Consular Section is the primary point of contact for Nigerian citizens in Japan and for foreign nationals seeking Nigerian visas. It is the most public-facing department of the Mission, processing thousands of applications annually.</p>
+          <p>Opening hours: Monday–Friday, 9:00 AM – 4:00 PM. Passport and visa submissions are by appointment. Walk-in services are available for emergencies and urgent consular matters.</p>
+        </div>
+        <div class="dept-tab-functions">
+          <h4>Key Services</h4>
+          <ul class="dept-func-list">
+            <li>Nigerian passport issuance and renewal</li>
+            <li>Visa services for foreign nationals</li>
+            <li>Document authentication and legalisation</li>
+            <li>Emergency travel certificates</li>
+            <li>Notarial services and affidavits</li>
+            <li>Consular assistance to Nigerians in distress</li>
+          </ul>
+          <div class="dept-contact-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:consular.tokyo@foreignaffairs.gov.ng">consular.tokyo@foreignaffairs.gov.ng</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Economic -->
+    <div id="dept-economic" class="tab-panel dept-tab-panel" role="tabpanel">
+      <div class="dept-tab-inner">
+        <div class="dept-tab-desc">
+          <p>The Economic Section promotes bilateral trade and investment between Nigeria and Japan. It works closely with the Nigerian Export Promotion Council (NEPC), the Nigerian Investment Promotion Commission (NIPC), and Japan business associations to facilitate commercial partnerships and attract Japanese investment to Nigeria.</p>
+          <p>The section also monitors economic developments in Japan relevant to Nigeria and provides economic reporting to Abuja's Ministry of Finance and Central Bank of Nigeria.</p>
+        </div>
+        <div class="dept-tab-functions">
+          <h4>Key Functions</h4>
+          <ul class="dept-func-list">
+            <li>Business matchmaking and trade facilitation</li>
+            <li>Investment promotion in Nigeria's priority sectors</li>
+            <li>Economic research and market intelligence</li>
+            <li>Organisation of trade fairs and business forums</li>
+            <li>Engagement with JETRO and Japan Chamber of Commerce</li>
+          </ul>
+          <div class="dept-contact-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:economic.tokyo@foreignaffairs.gov.ng">economic.tokyo@foreignaffairs.gov.ng</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cultural -->
+    <div id="dept-cultural" class="tab-panel dept-tab-panel" role="tabpanel">
+      <div class="dept-tab-inner">
+        <div class="dept-tab-desc">
+          <p>The Cultural Section promotes Nigeria's rich cultural heritage and manages public diplomacy activities. It organises cultural events, engages Nigerian community organisations, and serves as the Mission's interface with media and the public in Japan.</p>
+          <p>The section is also responsible for supporting Nigerian students and academics in Japan, engaging the Nigerian diaspora community, and coordinating national day celebrations and official receptions.</p>
+        </div>
+        <div class="dept-tab-functions">
+          <h4>Key Functions</h4>
+          <ul class="dept-func-list">
+            <li>Nigerian cultural festivals and heritage exhibitions</li>
+            <li>Engagement with Nigerian community associations</li>
+            <li>Media relations and press releases</li>
+            <li>Public information and outreach</li>
+            <li>Support for Nigerian students in Japan</li>
+            <li>National Day ceremonies and diplomatic receptions</li>
+          </ul>
+          <div class="dept-contact-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:culture.tokyo@foreignaffairs.gov.ng">culture.tokyo@foreignaffairs.gov.ng</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Administration -->
+    <div id="dept-admin" class="tab-panel dept-tab-panel" role="tabpanel">
+      <div class="dept-tab-inner">
+        <div class="dept-tab-desc">
+          <p>The Administration Section supports all operational functions of the Mission. It manages financial reporting to Nigeria's Ministry of Finance, human resources for locally-engaged staff, facilities management, and procurement in compliance with Nigerian Government financial regulations.</p>
+          <p>The section ensures the Mission's day-to-day operational continuity, staff welfare, and adherence to Nigeria's public financial management standards.</p>
+        </div>
+        <div class="dept-tab-functions">
+          <h4>Key Functions</h4>
+          <ul class="dept-func-list">
+            <li>Mission financial management and reporting</li>
+            <li>Human resources and staff welfare</li>
+            <li>Facilities and property management</li>
+            <li>Procurement and logistics</li>
+            <li>IT infrastructure and communications</li>
+          </ul>
+          <div class="dept-contact-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:admin.tokyo@foreignaffairs.gov.ng">admin.tokyo@foreignaffairs.gov.ng</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /tabs-container -->
+
+</div></section>
+</main>
+
+<footer class="site-footer"><div class="flag-strip" aria-hidden="true"><span class="flag-green"></span><span class="flag-white"></span><span class="flag-green"></span></div>
+  <div class="footer-top"><div class="container"><div class="footer-grid">
+    <div class="footer-about"><a href="index.html" class="site-logo"><img src="images/mfa-logo.png" alt="Federal Republic of Nigeria" class="logo-img" style="height:52px;opacity:.9;"><div class="logo-divider" style="background:rgba(255,255,255,.2);"></div><div class="logo-text"><div class="mission-country" style="color:#999;">Federal Republic of Nigeria</div><div class="mission-title" style="color:#fff;">Embassy of Nigeria, Tokyo</div></div></a><p style="margin-top:1rem;font-size:.875rem;color:#aaa;">Official diplomatic mission of the Federal Republic of Nigeria.</p></div>
+    <div class="footer-col"><h4>About</h4><ul class="footer-links"><li><a href="about-overview.html">Mission Overview</a></li><li><a href="about-ambassador.html">Head of Mission</a></li><li><a href="about-history.html">Mission History</a></li><li><a href="about-mandate.html">Mandate</a></li><li><a href="about-leadership.html">Leadership</a></li></ul></div>
+    <div class="footer-col"><h4>Services</h4><ul class="footer-links"><li><a href="visa-services.html">Visa Services</a></li><li><a href="passport-services.html">Passport Services</a></li><li><a href="emergency-travel.html">Emergency Travel</a></li><li><a href="consular-assistance.html">Consular Assistance</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul class="footer-contact-info"><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><address style="font-style:normal;">[Address], Japan</address></li><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.86 9.11 19.79 19.79 0 0 1 .79.5 2 2 0 0 1 2.78 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 8.5a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+0000000000">+[Code] [Number]</a></li><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:info.tokyo@foreignaffairs.gov.ng">info.tokyo@foreignaffairs.gov.ng</a></li></ul></div>
+  </div></div></div>
+  <div class="footer-bottom"><div class="container"><div class="footer-bottom-inner"><p>© <span id="footerYear"></span> Embassy of the Federal Republic of Nigeria. All rights reserved.</p><nav class="footer-bottom-links"><a href="privacy-policy.html">Privacy Policy</a><a href="accessibility.html">Accessibility</a><a href="terms.html">Terms of Use</a><a href="sitemap.html">Sitemap</a></nav></div></div></div>
+</footer>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+<script>document.getElementById('footerYear').textContent=new Date().getFullYear();</script>
+<script src="main.js"></script>
+</body></html>

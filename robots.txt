@@ -1,0 +1,57 @@
+# robots.txt — Embassy of Nigeria, [Host Country]
+# https://www.nigerianembassy.[xx]/robots.txt
+# Last updated: 2026-06-01
+
+# Allow all well-behaved crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and internal paths (if they exist on the server)
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /includes/
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /.well-known/
+
+# Disallow form submission endpoints
+Disallow: /submit
+Disallow: /api/
+
+# Disallow search result pages with query strings
+Disallow: /*?q=
+Disallow: /*?search=
+Disallow: /*?s=
+
+# Disallow print-only pages
+Disallow: /*?print=1
+Disallow: /*?format=print
+
+# Allow specific bots full access
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block known bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# XML Sitemap location
+Sitemap: https://www.nigerianembassy.[xx]/sitemap.xml
